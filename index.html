@@ -7,29 +7,34 @@
     <title>vanillaJs guessingGame</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <h1>Guess a number</h1>
+        <h1>Guess a number</h1>
 
-    <p>The game selects a random number between 1 and 100. See if you can guess the number in 10 turns or fewer. The
+        <p>The game selects a random number between 1 and 100. See if you can guess the number in 10 turns or fewer. The
         game will tell you
         if your guess was too high or too low.</p>
 
-    <div class="form">
-        <label for="guessField">Enter your guess here: </label>
-        <input type="text" id="guessField" class="guessField">
-        <input type="submit" value="Submit guess" class="guessSubmit">
-    </div>
+        <div class="formContainer">
+            <div class="form">
+                <label for="guessField">Enter your guess here: </label>
+                <input type="text" id="guessField" class="guessField">
+            </div>
+            <input type="submit" value="Submit guess" class="guessSubmit">
+        </div>  
 
-    <div class="resultParas">
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
-        <p class="guesses"></p>
-    </div>
-
+        <div class="resultParas">
+            <div class="result">
+                <p class="lastResult"></p>
+                <p class="lowOrHi"></p>
+            </div>
+            <div>
+                <p class="guesses"></p>
+            </div>
+        </div>
 </body>
 
 </html>
