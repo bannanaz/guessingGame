@@ -7,25 +7,27 @@
     <title>vanillaJs guessingGame</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Open+Sans&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <h1>Number guessing game</h1>
+    <h1>Guess a number</h1>
 
-    <p>I've selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. I'll tell you
+    <p>The game selects a random number between 1 and 100. See if you can guess the number in 10 turns or fewer. The
+        game will tell you
         if your guess was too high or too low.</p>
 
     <div class="form">
-        <label for="guessField">Enter your guess: </label>
+        <label for="guessField">Enter your guess here: </label>
         <input type="text" id="guessField" class="guessField">
         <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
     <div class="resultParas">
-        <p class="guesses"></p>
         <p class="lastResult"></p>
         <p class="lowOrHi"></p>
+        <p class="guesses"></p>
     </div>
 
 </body>

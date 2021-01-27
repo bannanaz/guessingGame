@@ -20,23 +20,24 @@ function checkGuess() {
 
     if (userGuess === randomNumber) {
         lastResult.textContent = 'Congratulations! You got it right!'
-        lastResult.style.backgroundColor = 'green'
+        lastResult.style.color = 'green'
         lowOrHi.textContent = ''
         setGameOver()
     }
 
     else if (guessCount === 10) {
-        lastResult.textContent = '!!!GAME OVER!!!'
+        lastResult.textContent = 'GAME OVER!'
+        lastResult.style.color = 'red'
         setGameOver()
     }
 
     else {
-        lastResult.textContent = 'Wrong!'
-        lastResult.style.backgroundColor = 'red'
+        lastResult.textContent = 'Wrong number!'
+        lastResult.style.color = 'red'
         if (userGuess < randomNumber) {
-            lowOrHi.textContent = 'Last guess was too low!'
+            lowOrHi.textContent = 'Last guess was too low.'
         } else if (userGuess > randomNumber) {
-            lowOrHi.textContent = 'Last guess was too high!'
+            lowOrHi.textContent = 'Last guess was too high.'
         }
     }
 
