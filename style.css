@@ -1,37 +1,70 @@
  html {
     font-family: 'Roboto', sans-serif;
-        background-image: url(img/bg_running_desktop.jpg);
+        background-image: url(img/green.jpg);
         background-repeat: no-repeat;
         height: 100%;
       }
 
       body {
-        position: fixed;
+        position: relative;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        max-width: 800px;
-        min-width: 400px;
         padding: 40px;
         background-color: white;
-        border-radius: 10px;
-        border: 15px solid #e3d8d8;
-        min-height: 40%;
+        min-height: 50%;
+        max-width: 600px;
+        min-width: 250px;
       }
 
-      .gamepad{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
+        body:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          height: 20px;
+          width: 100%;
+          background: #e2512c;
+          background: repeating-linear-gradient(
+            -45deg,
+            #e2512c,
+            #e2512c 12px,
+            transparent 10px,
+            transparent 23px
+          );
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          border-bottom: 0;
+        }
+
+        body:after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            height: 20px;
+            width: 100%;
+            background: #e2512c;
+            background: repeating-linear-gradient(
+              -45deg,
+              #e2512c,
+              #e2512c 12px,
+              transparent 10px,
+              transparent 23px
+            );
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-bottom: 0;
+          }
+        
 
       h1 {
           text-align: center;
           padding-top: 0px;
-          margin-top: 0px;
+          margin-top: 20px;
           font-weight: bold;
           font-size: 34px;
       }
@@ -43,6 +76,7 @@
       .formContainer {
           display: flex; 
           flex-direction: column;
+          margin-bottom: 20px;
       }
 
       .form {
@@ -91,29 +125,11 @@
           display: flex; 
           flex-direction: column;
           align-items: center;
+          margin-bottom: 20px;
       }
-
-      .result {
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-      }
-
-      .guesses {
+      
+      .resultParas p {
           margin-top: 0px;
       }
-
-    
-
-      /*
-
-      .resultParas p:first-of-type {
-          display: inline;
-      }
-
-      .resultParas p:nth-of-type(2) {
-          display: inline;
-      }
-*/
 
     

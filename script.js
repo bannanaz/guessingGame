@@ -20,7 +20,7 @@ function checkGuess() {
     guesses.textContent += userGuess + ' '
 
     if (userGuess === randomNumber) {
-        lastResult.textContent = 'Congratulations! You got it right!'
+        lastResult.textContent = '🏆 Congratulations! You got it right!'
         lastResult.style.color = 'green'
         lowOrHi.textContent = ''
         setGameOver()
