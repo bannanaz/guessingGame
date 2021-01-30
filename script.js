@@ -52,11 +52,12 @@ guessSubmit.addEventListener('click', checkGuess)
 function setGameOver() {
     guessField.disabled = true;
     guessSubmit.disabled = true;
+    modalGameOver.style.display = "block";
     resetButton = document.createElement('button');
-    resetButton.textContent = 'Start new game!';
+    resetButton.textContent = 'Start new game';
     resetButton.setAttribute("class", "guessSubmit")
 
-    resultParas.appendChild(resetButton);
+    modalContentGameOver.appendChild(resetButton);
     resetButton.addEventListener('click', resetGame);
 }
 
@@ -69,6 +70,7 @@ function resetGame() {
     }
 
     resetButton.parentNode.removeChild(resetButton);
+    modalGameOver.style.display = "none";
 
     guessField.disabled = false;
     guessSubmit.disabled = false;
@@ -78,4 +80,29 @@ function resetGame() {
     lastResult.style.backgroundColor = 'white';
 
     randomNumber = Math.floor(Math.random() * 100) + 1;
+}
+
+// --- GAME OVER MODAL ---
+// Get the modal
+let modalGameOver = document.getElementById("modalGameOver");
+let modalContentGameOver = document.getElementById("modalContentGameOver");
+
+// Get the <span> element that closes the modal
+let closeBtn = document.getElementById("closeBtn");
+
+// When the user clicks the button, open the modal 
+//btn.onclick = function() {
+  //modalGameOver.style.display = "block";
+//}
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function() {
+    modalGameOver.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalGameOver) {
+    modalGameOver.style.display = "none";
+  }
 }
