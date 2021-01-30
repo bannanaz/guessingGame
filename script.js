@@ -22,19 +22,19 @@ function checkGuess() {
     if (userGuess === randomNumber) {
         lastResult.textContent = '🏆 Congratulations! You got it right!'
         lastResult.style.color = 'green'
+        lastResult.style.fontSize = '20px'
         lowOrHi.textContent = ''
         setGameOver()
     }
 
     else if (guessCount === 10) {
-        lastResult.textContent = 'GAME OVER! '
-        lastResult.style.color = 'red'
         setGameOver()
     }
 
     else {
         lastResult.textContent = 'Wrong number! '
         lastResult.style.color = 'red'
+        lastResult.style.fontSize = '20px'
         if (userGuess < randomNumber) {
             lowOrHi.textContent = 'Your last guess was too low.'
         } else if (userGuess > randomNumber) {
